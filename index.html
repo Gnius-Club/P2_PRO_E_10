@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Sesión 10: ¡Refinando la Magia! – Optimización o Feature Adicional 2</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #ffa500; color: white; text-align: center; padding: 10px; } /* Orange Accent */
+        .activity { margin-bottom: 20px; }
+        .banner {
+            background-color: #ffa500; /* Orange Accent */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+            list-style: none;
+            display: block;
+        }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+        span[style*="color: red;"] {
+            font-weight: bold;
+        }
+         ul, ol {
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .time-title { margin-bottom: 20px; text-align: center; font-size: 1.2em; color: #555;}
+
+        summary {
+           display: block;
+           list-style: none;
+        }
+        summary::-webkit-details-marker {
+           display: none;
+        }
+
+    </style>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content) {
+                if (content.style.display === "none" || content.style.display === "") {
+                    content.style.display = "block";
+                } else {
+                    content.style.display = "none";
+                }
+            }
+        }
+
+        window.onload = () => {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Playbook - Sesión 10: ¡Refinando la Magia! – Optimización o Feature Adicional 2</h1>
+    </div>
+    <div class="container">
+        <h2 class="time-title">Tiempo efectivo de clase: 40 minutos</h2>
+
+        <!-- Resumen de Sesión -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('activity_0_content')">
+                <div class="title">📝 Resumen de Sesión</div>
+            </div>
+            <div id="activity_0_content" class="content">
+                <table>
+                    <tr>
+                        <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
+                            <strong>🎯 Objetivo de la Sesión:</strong>
+                            <ul>
+                                <li>Decidir estratégicamente si optimizar/pulir el proyecto existente o añadir una segunda característica adicional (más pequeña) del T-Bar.</li>
+                                <li>Implementar la decisión tomada: comenzar el pulido o iniciar la planificación/diseño de la Feature 2.</li>
+                            </ul>
+                            <strong>⏱️ Duración Estimada:</strong> 40 minutos.
+                        </td>
+                        <td style="width: 50%; padding: 10px;">
+                            <strong>🔑 Entregable Clave:</strong>
+                            <ul>
+                                <li>Decisión clara del equipo sobre el camino a seguir (Optimizar vs. Feature 2).</li>
+                                <li>Progreso en la implementación de la decisión (código/arte pulido o diseño/backlog inicial de Feature 2).</li>
+                                <li>Tablero Kanban actualizado con nuevas tareas de optimización o de Feature 2.</li>
+                            </ul>
+                             <strong>🛠️ Materiales/Preparación:</strong>
+                            <ul>
+                                <li>Dispositivos con acceso a Scratch y los proyectos con Feature 1 probada.</li>
+                                <li>Tablero Kanban de cada equipo actualizado.</li>
+                                <li>Acceso al T-Bar original.</li>
+                                <li>Proyector o pantalla.</li>
+                                <li>(Opcional) Criterios o ejemplos de "optimización" (ej. fluidez, estética, corrección de bugs menores).</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Desarrollo de la Sesión -->
+
+        <!-- Actividad 1: Stand-up Estratégico -->
+        <div id="activity-1" class="activity">
+             <div class="banner" onclick="toggleContent('activity_1_content')">
+                <div class="title">🤔 Actividad 1: Stand-up Estratégico ⏰ Tiempo: 10 minutos</div>
+             </div>
+            <div id="activity_1_content" class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Acción</th>
+                            <th style="width: 50%;">Diálogo del Maestro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Paso 1 (1 min):</strong> Introducir el dilema estratégico de la sesión.
+                                (<strong>Proyectar Diapositiva 1</strong>: Título "Sesión 10: ¡Refinando la Magia!" y Objetivo: "Decidir: ¿Pulimos o añadimos Feature 2?").
+                            </td>
+                            <td>
+                                "¡Equipos Pro! Han avanzado mucho. Ahora llegamos a un punto estratégico interesante. Tenemos que tomar una decisión importante para las últimas sesiones: ¿Nos dedicamos a refinar y pulir lo que ya tenemos para que quede espectacular, o nos aventuramos a añadir una segunda feature adicional (más pequeña)?"
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Paso 2 (4 min):</strong> Guiar revisión del estado del proyecto (Kanban, tiempo restante).
+                                (<strong>Proyectar Diapositiva 2</strong>: Visual del Kanban + Reloj/Calendario. Preguntas: "¿Cómo vamos de tiempo?", "¿Qué falta?", "¿Qué se puede mejorar?").
+                            </td>
+                            <td>
+                                "Miren su Kanban. ¿Cómo está el estado general del proyecto? ¿Cuántas tareas quedan? ¿Cómo ven la calidad actual de lo que tienen?"
+                                <br><br>
+                                "Consideren también el tiempo que nos queda (2 sesiones más después de esta). ¿Es realista añadir algo nuevo o sería mejor enfocarnos en pulir?"
+                                <br><br>
+                                "Piensen: ¿Hay bugs menores que arreglar? ¿Se puede mejorar la fluidez? ¿La apariencia visual necesita retoques?"
+                                <br><br>
+                                <em>(Facilitar que los equipos evalúen su progreso actual y el tiempo disponible).</em>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                <strong>Paso 3 (5 min):</strong> Facilitar la discusión y toma de decisión en equipo: ¿Pulimos o añadimos Feature 2? Anotar la decisión.
+                            </td>
+                            <td>
+                                "Ahora, la gran decisión. Conversen en equipo (5 minutos):"
+                                <ul>
+                                    <li><strong>Opción 1: Optimizar/Pulir ✨:</strong> Enfocarse en mejorar lo existente (corregir bugs menores, mejorar visuales, hacer más fluido).</li>
+                                    <li><strong>Opción 2: Añadir Feature 2 ➕:</strong> Si el tiempo lo permite y hay una feature adicional (más pequeña) del T-Bar que les gustaría implementar.</li>
+                                </ul>
+                                "Debatan pros y contras. ¿Qué camino creen que dará un mejor resultado final en el tiempo que nos queda?"
+                                <br><br>
+                                "¡Tomen una decisión como equipo y anótenla!"
+                                <br><br>
+                                <em>(Circular, escuchar argumentos, ayudar a ponderar. Asegurar que cada equipo tome una decisión clara).</em>
+                                <br><br>
+                                "¿Listos? ¿Qué camino eligió cada equipo?" <em>(Hacer una ronda rápida para conocer la decisión de cada equipo).</em>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2: ¡Manos a la Obra! Trabajo Técnico -->
+        <div id="activity-2" class="activity">
+             <div class="banner" onclick="toggleContent('activity_2_content')">
+                 <div class="title">🛠️ Actividad 2: ¡Manos a la Obra! Trabajo Técnico ⏰ Tiempo: 25 minutos</div>
+             </div>
+            <div id="activity_2_content" class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Acción</th>
+                            <th style="width: 50%;">Diálogo del Maestro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Paso 1 (25 min - Bloque Principal):</strong> Equipos implementan su decisión:
+                                - *Si Optimizar:* Trabajan en pulir código/arte, corregir bugs menores.
+                                - *Si Feature 2:* Comienzan a planificar/diseñar Feature 2 (similar a Sesión 7) y/o crear backlog inicial.
+                                Facilitador apoya según el camino elegido. Roles interactúan.
+                                (<strong>Proyectar Diapositiva 3</strong>: Título "Implementando la Decisión". Dos columnas visuales: Izquierda "Optimizar ✨" (iconos: lupa, herramientas, pincel); Derecha "Feature 2 ➕" (iconos: plano, bombilla, lista)).
+                            </td>
+                            <td>
+                                "¡Decisión tomada! Ahora, ¡manos a la obra! Tienen 25 minutos para avanzar en el camino que eligieron."
+                                <br><br>
+                                "<strong>Equipos que Optimizarán ✨:</strong> ¡A pulir se ha dicho! Identifiquen áreas de mejora (bugs menores, visuales, fluidez) y trabajen en ellas. Programadores/as refinan código, Testers prueban mejoras, Arquitectos/as guían el pulido."
+                                <br><br>
+                                "<strong>Equipos que Añadirán Feature 2 ➕:</strong> ¡Empiecen a planificar! Definan bien qué hará esa Feature 2 (¡recuerden que debe ser más pequeña!). Diseñen cómo funcionará y cómo se integrará. Empiecen a crear las primeras tareas en su Kanban (similar a como hicieron con Feature 1)."
+                                <br><br>
+                                "¡Concentrados en su camino elegido!"
+                                <br><br>
+                                <em>(Circular activamente, ofreciendo apoyo diferenciado. A los que optimizan: ayudar a identificar mejoras, sugerir técnicas de pulido. A los que planifican Feature 2: guiar el diseño, la descomposición en tareas y la priorización).</em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Paso 2 (Integrado en los 25 min):</strong> Guiar actualización del Kanban según el camino: añadir tareas de optimización O tareas de Feature 2 a "Por Hacer" y mover la primera a "Haciendo".
+                                (<strong>Proyectar Diapositiva 4</strong>: Título "Actualizando el Kanban". Dos ejemplos visuales: Kanban con nuevas tareas de "Optimizar X" o Kanban con nuevas tareas de "Diseñar F2", "Crear sprite F2", etc.).
+                            </td>
+                            <td>
+                                <em>(Mientras circulan, recordar actualizar el Kanban):</em>
+                                <br>
+                                "¡No olviden reflejar su trabajo en el Kanban!"
+                                <br><br>
+                                "<strong>Si están optimizando:</strong> Creen tareas específicas para las mejoras que están haciendo (ej. 'Corregir bug visual del botón', 'Optimizar código de movimiento') y pónganlas en 'Por Hacer'. Muevan la que están trabajando a 'Haciendo'."
+                                <br><br>
+                                "<strong>Si están planificando Feature 2:</strong> Creen las tareas de diseño y las primeras tareas de implementación en 'Por Hacer'. Muevan la primera tarea (probablemente 'Diseñar F2' o similar) a 'Haciendo'."
+                                <br><br>
+                                "¡El Kanban debe mostrar siempre en qué estamos trabajando!"
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3: Cierre Rápido -->
+        <div id="activity-3" class="activity">
+            <div class="banner" onclick="toggleContent('activity_3_content')">
+                <div class="title">⏱️ Actividad 3: Cierre Rápido ⏰ Tiempo: 5 minutos</div>
+            </div>
+            <div id="activity_3_content" class="content">
+                 <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Acción</th>
+                            <th style="width: 50%;">Diálogo del Maestro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Paso 1 (3 min):</strong> Actualizar Kanban. Puesta en común breve del camino elegido y primer avance.
+                            </td>
+                            <td>
+                                "¡Tiempo, Equipos! Última sincronización."
+                                <br><br>
+                                "Asegúrense de que su Kanban refleje el trabajo de hoy. Rápidamente, cada equipo comparta: ¿Eligieron optimizar o Feature 2? ¿Cuál fue el primer paso que dieron hoy?"
+                                <br><br>
+                                <em>(Facilitar ronda rápida para compartir decisión y primer avance).</em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Paso 2 (2 min):</strong> Cerrar sesión. Recordar guardar. Anticipar próxima sesión (Verificación Final o Desarrollo F2).
+                                (<strong>Proyectar Diapositiva 5</strong>: Mensaje "¡Decisión Tomada! ✅ Guardar. Próxima parada: ¡Verificación Final 🧐 / Desarrollo F2 🏗️!").
+                            </td>
+                            <td>
+                                "¡Excelente trabajo estratégico y práctico hoy!"
+                                <br><br>
+                                "¡Guarden todo su progreso, ya sea de optimización o de planificación!"
+                                <br><br>
+                                "En la próxima sesión, continuaremos por el camino elegido: los que optimizaron, nos prepararemos para la verificación final; los que eligieron Feature 2, ¡seguiremos construyéndola!"
+                                <br><br>
+                                "¡Nos vemos en la Sesión 11!"
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div> <!-- Fin del container -->
+</body>
+</html>
